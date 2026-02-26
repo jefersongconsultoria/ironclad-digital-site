@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ironclad Digital | Digital Structure & Governance</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+header {
+    padding: 25px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.hero {
+    padding: 120px 10%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaa;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 14px 28px;
+    background: #ffffff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d4d4d4;
+}
+
+.section {
+    padding: 100px 10%;
+    border-top: 1px solid #1f1f1f;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #141414;
+    padding: 30px;
+    border: 1px solid #1f1f1f;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #ffffff;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.footer {
+    padding: 40px 10%;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #1f1f1f;
+}
+
+@media(max-width:768px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">IRONCLAD DIGITAL</div>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#framework">Framework</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Structure. Protect. Scale.</h1>
+    <p>We build and protect digital operations inside Meta and WhatsApp Business for companies that demand security, stability and predictable growth.</p>
+    <a href="#contact" class="btn">Request Strategic Assessment</a>
+</section>
+
+<section class="section" id="services">
+    <h2>Our Expertise</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Meta Business Structure</h3>
+            <p>Professional Business Manager organization and enterprise-level governance.</p>
+        </div>
+        <div class="card">
+            <h3>WhatsApp Official API</h3>
+            <p>Cloud API implementation, webhook architecture and performance monitoring.</p>
+        </div>
+        <div class="card">
+            <h3>Digital Protection</h3>
+            <p>Security policies, access control and operational compliance strategy.</p>
+        </div>
+        <div class="card">
+            <h3>Scalable Growth</h3>
+            <p>Template strategy, quality management and messaging limit expansion.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="framework">
+    <h2>Ironclad Framework™</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Structure</h3>
+            <p>Build solid foundations within Meta Business ecosystem.</p>
+        </div>
+        <div class="card">
+            <h3>Protection</h3>
+            <p>Implement strict governance and account security controls.</p>
+        </div>
+        <div class="card">
+            <h3>Compliance</h3>
+            <p>Ensure operational alignment with Meta policies and best practices.</p>
+        </div>
+        <div class="card">
+            <h3>Scale</h3>
+            <p>Grow safely with optimized messaging quality and performance metrics.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: contact@ironcladdigital.com</p>
+    <p>Location: Vitória da Conquista, Bahia - Brazil</p>
+</section>
+
+<footer class="footer">
+    © 2026 Ironclad Digital. All rights reserved.
+</footer>
+
+</body>
+</html>
