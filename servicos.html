@@ -2,26 +2,148 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serviços | Ironclad Digital</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{background:#050505;color:#fff;font-family:Poppins;padding:80px;}
-h1{color:#00f0ff;}
+
+body{
+background:#050505;
+color:#fff;
+font-family:Poppins;
+padding:80px 8%;
+overflow-x:hidden;
+}
+
+h1{
+font-family:Orbitron;
+color:#00f0ff;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.top-btn{
+display:inline-block;
+margin-bottom:40px;
+padding:10px 20px;
+background:linear-gradient(45deg,#00f0ff,#0077ff);
+border-radius:30px;
+color:#000;
+font-weight:600;
+text-decoration:none;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:20px;
+transition:0.4s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+transform:rotateY(8deg) scale(1.05);
+box-shadow:0 0 30px rgba(0,240,255,0.3);
+}
+
+.platforms{
+margin-top:80px;
+text-align:center;
+}
+
+.icons{
+display:flex;
+justify-content:center;
+gap:50px;
+margin-top:30px;
+}
+
+.icons img{
+width:80px;
+transition:0.4s;
+filter:drop-shadow(0 0 10px rgba(0,240,255,0.4));
+}
+
+.icons img:hover{
+transform:rotateY(20deg) scale(1.2);
+}
+
+.risk{
+margin-top:100px;
+padding:40px;
+background:rgba(255,0,0,0.08);
+border:1px solid rgba(255,0,0,0.3);
+border-radius:20px;
+}
+
+.risk h2{
+color:#ff4d4d;
+margin-bottom:20px;
+}
+
 </style>
 </head>
+
 <body>
-<h1>Nossos Serviços</h1>
 
+<a href="index.html" class="top-btn">← Voltar para Início</a>
+
+<h1>Arquitetura e Blindagem Operacional</h1>
+
+<div class="grid">
+
+<div class="card">
 <h3>Arquitetura Meta Business</h3>
-<p>Estruturação completa de Business Manager, verificação empresarial e governança corporativa.</p>
+<p>Estruturação hierárquica, organização de ativos, verificação empresarial e governança corporativa.</p>
+</div>
 
-<h3>WhatsApp Cloud API</h3>
-<p>Implementação oficial com webhook estruturado e estratégia de templates.</p>
+<div class="card">
+<h3>WhatsApp Cloud API Oficial</h3>
+<p>Integração com Webhook seguro, estratégia de templates, controle de qualidade e reputação.</p>
+</div>
 
-<h3>Blindagem Operacional</h3>
-<p>Proteção contra bloqueios, controle de qualidade e estratégia de contingência.</p>
+<div class="card">
+<h3>Blindagem Anti-Bloqueio</h3>
+<p>Proteção contra restrições, análise preventiva e estratégia de contingência.</p>
+</div>
 
+<div class="card">
 <h3>Escala Estratégica</h3>
-<p>Aumento progressivo de limites com reputação sólida.</p>
+<p>Aumento progressivo de limites com estabilidade e previsibilidade operacional.</p>
+</div>
+
+</div>
+
+<div class="platforms">
+<h2>Especialistas nas Plataformas</h2>
+
+<div class="icons">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</div>
+</div>
+
+<div class="risk">
+<h2>⚠️ Riscos Reais que Empresas Ignoram</h2>
+<p>
+• Banimento definitivo de número oficial<br>
+• Perda de verificação empresarial<br>
+• Restrição de envio por baixa qualidade<br>
+• Bloqueio de Business Manager<br>
+• Perda de acesso a ativos estratégicos<br><br>
+Empresas despreparadas operam vulneráveis.  
+Nós construímos estruturas resilientes.
+</p>
+</div>
 
 </body>
 </html>
