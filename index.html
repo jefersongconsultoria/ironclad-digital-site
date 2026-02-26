@@ -3,41 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ironclad Digital | Especialista Meta & WhatsApp</title>
+<title>Ironclad Digital | Arquitetura Meta</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:Poppins;
-background:#050505;
+background:#030303;
 color:#fff;
 overflow-x:hidden;
 cursor:none;
 }
 
-#particles-js{
+/* FUNDO GRID ANIMADO */
+body::before{
+content:"";
 position:fixed;
-width:100%;
-height:100%;
+width:200%;
+height:200%;
+background:
+linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+background-size:60px 60px;
+animation:gridMove 20s linear infinite;
+z-index:-2;
+}
+
+@keyframes gridMove{
+0%{transform:translate(0,0);}
+100%{transform:translate(-60px,-60px);}
+}
+
+/* GLOW BACKGROUND */
+.glow{
+position:fixed;
+width:400px;
+height:400px;
+background:radial-gradient(circle,#00f0ff33,transparent);
+border-radius:50%;
+pointer-events:none;
 z-index:-1;
 }
 
+/* HEADER */
 header{
 position:fixed;
 width:100%;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
-backdrop-filter:blur(10px);
+backdrop-filter:blur(15px);
 background:rgba(0,0,0,0.6);
 z-index:999;
 }
 
 .logo{
 font-family:Orbitron;
+font-size:20px;
 color:#00f0ff;
+letter-spacing:2px;
 }
 
 nav a{
@@ -46,36 +73,62 @@ text-decoration:none;
 color:#fff;
 transition:0.3s;
 }
+nav a:hover{
+color:#00f0ff;
+}
 
-nav a:hover{color:#00f0ff;}
-
-section{padding:120px 8%;}
-
-.hero{height:100vh;display:flex;align-items:center;}
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
 
 .hero h1{
-font-size:52px;
+font-size:58px;
+font-family:Orbitron;
 background:linear-gradient(90deg,#00f0ff,#0077ff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+animation:fadeIn 2s ease;
 }
 
-.hero p{margin:20px 0;color:#ccc;}
+.hero p{
+margin:20px 0;
+color:#ccc;
+font-size:18px;
+}
 
 .btn{
-padding:12px 26px;
+padding:14px 28px;
 border:none;
-border-radius:30px;
+border-radius:40px;
 background:linear-gradient(45deg,#00f0ff,#0077ff);
 font-weight:600;
 cursor:pointer;
+transition:0.4s;
+}
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px #00f0ff;
+}
+
+/* SEÇÕES */
+section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:50px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
+gap:40px;
 }
 
 .card{
@@ -83,29 +136,54 @@ background:rgba(255,255,255,0.05);
 padding:30px;
 border-radius:20px;
 transition:0.4s;
+backdrop-filter:blur(10px);
 }
 .card:hover{
-transform:rotateY(8deg) scale(1.05);
-box-shadow:0 0 25px rgba(0,240,255,0.3);
+transform:rotateY(10deg) scale(1.05);
+box-shadow:0 0 40px rgba(0,240,255,0.3);
 }
 
-.pricing{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
+/* LOGOS 3D */
+.platforms{
+text-align:center;
 margin-top:50px;
 }
-
-.plan{
-flex:1;
-min-width:250px;
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:20px;
+.icons{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:30px;
+}
+.icons img{
+width:90px;
+transition:0.5s;
+filter:drop-shadow(0 0 15px #00f0ff);
+animation:float 4s ease-in-out infinite;
+}
+.icons img:hover{
+transform:rotateY(25deg) scale(1.2);
 }
 
-.plan h3{color:#00f0ff;}
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
 
+/* SOM BOTÃO */
+.sound-btn{
+position:fixed;
+bottom:25px;
+left:25px;
+background:#111;
+border:1px solid #00f0ff;
+color:#00f0ff;
+padding:10px 15px;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:25px;
@@ -114,13 +192,15 @@ background:#25D366;
 padding:15px 20px;
 border-radius:50px;
 color:#000;
-text-decoration:none;
 font-weight:600;
+text-decoration:none;
+box-shadow:0 0 20px #25D366;
 }
 
+/* CURSOR */
 .cursor{
-width:15px;
-height:15px;
+width:18px;
+height:18px;
 background:#00f0ff;
 border-radius:50%;
 position:fixed;
@@ -128,11 +208,18 @@ pointer-events:none;
 transform:translate(-50%,-50%);
 z-index:9999;
 }
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
 </style>
 </head>
+
 <body>
 
-<div id="particles-js"></div>
+<div class="glow"></div>
 <div class="cursor"></div>
 
 <header>
@@ -140,57 +227,55 @@ z-index:9999;
 <nav>
 <a href="servicos.html">Serviços</a>
 <a href="blog.html">Blog</a>
-<a href="#planos">Planos</a>
 </nav>
 </header>
 
 <section class="hero">
 <div>
-<h1>Estrutura Profissional para Empresas que Dependem da Meta</h1>
-<p>Especialista acessível para pequenas e médias empresas que precisam operar com segurança no WhatsApp Business API.</p>
-<button class="btn">Solicitar Diagnóstico</button>
+<h1>Arquitetura Digital Blindada</h1>
+<p>Especialista acessível para empresas que precisam operar dentro da Meta com segurança real e escala sustentável.</p>
+<button class="btn">Solicitar Diagnóstico Estratégico</button>
 </div>
 </section>
 
 <section>
-<h2>O que fazemos</h2>
-<div class="cards">
-<div class="card"><h3>Organização de BM</h3><p>Estruturação correta e verificação empresarial.</p></div>
-<div class="card"><h3>WhatsApp Oficial</h3><p>Cloud API estruturada com webhook seguro.</p></div>
-<div class="card"><h3>Blindagem</h3><p>Prevenção contra bloqueios e restrições.</p></div>
-<div class="card"><h3>Escala</h3><p>Aumento progressivo de limites.</p></div>
+<h2 class="section-title">Especialistas Oficiais</h2>
+<div class="platforms">
+<div class="icons">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</div>
 </div>
 </section>
 
-<section id="planos">
-<h2>Planos Iniciais</h2>
-<div class="pricing">
-<div class="plan">
-<h3>Start</h3>
-<p>Estruturação básica + Configuração API</p>
-</div>
-<div class="plan">
-<h3>Professional</h3>
-<p>Estrutura + Blindagem + Templates estratégicos</p>
-</div>
-<div class="plan">
-<h3>Growth</h3>
-<p>Estrutura completa + Estratégia de Escala</p>
-</div>
-</div>
-</section>
+<audio id="ambientSound" loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9b4f9c.mp3" type="audio/mpeg">
+</audio>
+
+<button class="sound-btn" onclick="toggleSound()">Ativar Som</button>
 
 <a class="whatsapp" href="https://wa.me/5599SEUNUMERO" target="_blank">WhatsApp</a>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS.load('particles-js','https://cdn.jsdelivr.net/particles.js/2.0.0/demo/particles.json');
-
 const cursor=document.querySelector(".cursor");
+const glow=document.querySelector(".glow");
+
 document.addEventListener("mousemove",e=>{
 cursor.style.left=e.clientX+"px";
 cursor.style.top=e.clientY+"px";
+glow.style.left=e.clientX-200+"px";
+glow.style.top=e.clientY-200+"px";
 });
+
+function toggleSound(){
+var sound=document.getElementById("ambientSound");
+if(sound.paused){
+sound.play();
+}else{
+sound.pause();
+}
+}
 </script>
 
 </body>
